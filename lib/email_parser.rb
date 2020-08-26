@@ -11,7 +11,7 @@ class EmailAddressParser
   end
   
   def parse
-    email.split(/[,\s]/).map{|email| email != " "}.uniq!
+    email.split(/[,\s]/).select{|email| email != " "}.uniq!
   end
  
 end
